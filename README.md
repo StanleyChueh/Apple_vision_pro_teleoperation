@@ -1,5 +1,22 @@
 # Apple_vision_pro_teleoperation
-Use Apple Vision Pro to control Franka emika panda
+## Introduction
+This repository is inspired by Unitree Robotics' avp_teleoperate: https://github.com/unitreerobotics/avp_teleoperate.git. 
 
-![image](https://github.com/user-attachments/assets/fcb31d70-dca5-463c-b216-6c8207719638)
+We integrate the OpenTeleVision component with the Franka Emika Panda robot using the Frankx low-level control framework.
+## How to run it
+Open one terminal and run:
+```
+python3 teleop_arm_pose_stable.py
+```
+This code publishes two ROS 2 topics: one for the distance between the index finger and thumb (/finger), and another for wrist pose displacement (/displacement). It can retarget the user's wrist pose to the robotic arm's wrist joint.
 
+Open another terminal and run:
+```
+python3 roboticArm_pose_remote_stable.py
+```
+This code integrates the /finger and /displacement topics, and uses Frankx to control a real Franka Emika Panda robot.
+
+Usage
+![image](https://github.com/user-attachments/assets/fc36a254-3b85-4bc5-89db-73695a9eea90)
+
+Demo: https://youtube.com/shorts/8B0iJiU9TVg?feature=share
