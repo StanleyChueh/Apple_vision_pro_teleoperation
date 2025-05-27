@@ -16,7 +16,6 @@ python3 roboticArm_pose_remote_stable.py
 ```
 This code integrates the /finger and /displacement topics, and uses Frankx to control a real Franka Emika Panda robot.
 
-Usage
 ![image](https://github.com/user-attachments/assets/9849d4c4-e391-431a-b1c5-16a4aa3da3c2)
 
 Demo: https://youtube.com/shorts/8B0iJiU9TVg?feature=share
