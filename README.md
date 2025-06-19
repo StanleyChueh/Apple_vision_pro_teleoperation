@@ -67,7 +67,7 @@ https://youtube.com/shorts/8B0iJiU9TVg?feature=share
     ├── [roboticArm_pose_remote_stable.py]  # Controls the Franka arm
     ├── README.md
 ```
-##### Please make sure you have set up [OpenTelevision environment](https://github.com/unitreerobotics/avp_teleoperate.git)
+##### Please make sure you have set up [OpenTelevision environment](https://github.com/unitreerobotics/avp_teleoperate.git) and [Frankx environment](https://github.com/pantor/frankx.git)
 ---
 
 ## 📝 License
