@@ -72,7 +72,7 @@ https://youtube.com/shorts/8B0iJiU9TVg?feature=share
 
 ## 📝 License
 
-This project is released under the MIT License.
+#### This project is released under the MIT License.
 ---
 
 ## 🤝 Acknowledgments
