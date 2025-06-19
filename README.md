@@ -1,6 +1,6 @@
 # 🖐️ Apple Vision Pro Teleoperation for Franka Emika Panda
 
-This project enables intuitive teleoperation of a **Franka Emika Panda** robotic arm using **Apple Vision Pro** hand tracking, integrating [OpenTeleVision](https://github.com/unitreerobotics/OpenTeleVision) with the low-level **Frankx** control framework.
+This project enables intuitive teleoperation of a **Franka Emika Panda** robotic arm using **Apple Vision Pro** hand tracking, integrating [OpenTeleVision](https://github.com/unitreerobotics/avp_teleoperate.git) with the low-level **Frankx** control framework.
 
 Inspired by Unitree Robotics' original [AVP Teleoperate](https://github.com/unitreerobotics/avp_teleoperate.git), this implementation allows real-time control of the robot arm using wrist pose and finger gesture recognition.
 
@@ -23,8 +23,8 @@ Inspired by Unitree Robotics' original [AVP Teleoperate](https://github.com/unit
 - Ubuntu 20.04+
 - ROS 2 (Foxy or later)
 - Python 3.8+
-- [Frankx](https://github.com/mintforpeople/frankx)
-- [OpenTeleVision](https://github.com/unitreerobotics/OpenTeleVision)
+- [Frankx](https://github.com/pantor/frankx.git)
+- [OpenTeleVision](https://github.com/unitreerobotics/avp_teleoperate.git)(h1 branch)
 - [Franka Emika Panda](https://franka.de/)
 
 ---
@@ -53,21 +53,26 @@ https://youtube.com/shorts/8B0iJiU9TVg?feature=share
 
 ---
 
-## 📁 Repository Structure (optional)
+## 📁 Repository Structure 
 
 ```bash
-.
-├── teleop_arm_pose_stable.py         # Publishes hand tracking data
-├── roboticArm_pose_remote_stable.py  # Controls the Franka arm
-├── README.md
-```
 
+├──avp_teleoperate
+  ├──act
+  ├──assets
+  ├──img
+  ├──scripts
+  ├──teleop
+    ├── [teleop_arm_pose_stable.py]         # Publishes hand tracking data
+    ├── [roboticArm_pose_remote_stable.py]  # Controls the Franka arm
+    ├── README.md
+```
+##### Please make sure you have set up [OpenTelevision environment](https://github.com/unitreerobotics/avp_teleoperate.git)
 ---
 
 ## 📝 License
 
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
-
+This project is released under the MIT License.
 ---
 
 ## 🤝 Acknowledgments
@@ -82,6 +87,6 @@ This project was originally developed to control a **Franka Emika Panda** robot 
 1. ❌ Cannot read robot state while executing motion commands.
 2. 🐢 Low robot state update rate (~15–17 Hz), whereas **LeRobot** ideally requires ≥ 30 Hz.
 
-Due to these constraints, we have transitioned to using the **franka_ros** framework as the low-level control layer in subsequent development.
+Due to these constraints, we have transitioned to using the [**franka_ros**](https://github.com/frankarobotics/franka_ros.git) framework as the low-level control layer in subsequent development.
 
 👉 **For details on the updated implementation, please check the [`dev`](https://github.com/StanleyChueh/Apple_vision_pro_teleoperation.git/tree/dev) branch.**
