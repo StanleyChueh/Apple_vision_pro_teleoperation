@@ -123,15 +123,4 @@ To enable joint position control and load impedance control in stopped mode, use
 ## 🤝 Acknowledgments
 
 - [Unitree Robotics - avp_teleoperate](https://github.com/unitreerobotics/avp_teleoperate.git)
-- [pantor - Frankx](https://github.com/pantor/frankx.git)
-
-### ⚠️ Known Issues
-
-This project was originally developed to control a **Franka Emika Panda** robot using **Apple Vision Pro**, aiming to collect datasets in the [LeRobot](https://github.com/huggingface/lerobot.git) format for training **ACT** models. However, the following limitations with the `frankx` control library were identified:
-
-1. ❌ Cannot read robot state while executing motion commands.
-2. 🐢 Low robot state update rate (~15–17 Hz), whereas **LeRobot** ideally requires ≥ 30 Hz.
-
-Due to these constraints, we have transitioned to using the [**franka_ros**](https://github.com/frankarobotics/franka_ros.git) framework as the low-level control layer in subsequent development.
-
-👉 **For details on the updated implementation, please check the [`dev`](https://github.com/StanleyChueh/Apple_vision_pro_teleoperation.git/tree/dev) branch.**
+- [Franka_ROS](https://github.com/frankarobotics/franka_ros.git)
