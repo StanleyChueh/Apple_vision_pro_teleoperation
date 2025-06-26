@@ -89,4 +89,4 @@ This project was originally developed to control a **Franka Emika Panda** robot 
 
 Due to these constraints, we have transitioned to using the [**franka_ros**](https://github.com/frankarobotics/franka_ros.git) framework as the low-level control layer in subsequent development.
 
-👉 **For details on the updated implementation, please check the [`dev`](https://github.com/StanleyChueh/Apple_vision_pro_teleoperation.git/tree/dev) branch.**
+👉 **For details on the updated implementation, please check the [`dev`](https://github.com/StanleyChueh/Apple_vision_pro_teleoperation/tree/dev) branch.**
