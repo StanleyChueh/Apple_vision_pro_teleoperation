@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# record.py (ROS1 改寫版本)
 import os
 import argparse
 import rospy
@@ -138,6 +139,7 @@ class DataRecorderNode(object):
         try:
             position = msg.pose.position
             orientation = msg.pose.orientation
+            # 將 quaternion 轉換成 roll, pitch, yaw
             quat = [orientation.x, orientation.y, orientation.z, orientation.w]
             rpy = tf.transformations.euler_from_quaternion(quat)  # tf for ROS1
             self.pose = [position.x, position.y, position.z] + list(rpy)
@@ -230,7 +232,6 @@ class DataRecorderNode(object):
                 view1_frames.append(eye_img)
 
                 agent_img = record['agent_image']
-                view2_frames.append(agent_img)
 
                 if agent_img is None:
                     rospy.logwarn(f"Failed to read agent image: {record['agent_image_path']}")
@@ -431,6 +432,7 @@ def main() -> None:
                 print("警告: 無有效數據，跳過該集")
 
         print("完成所有記錄，生成最終數據集...")
+        print(f"[Debug] episodes accumulated: {len(dataset.episodes)}")
         dataset.finalize()
         print(f"數據集成功生成於: {dataset.root}")
 
